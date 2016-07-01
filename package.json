@@ -1,0 +1,23 @@
+{
+  "name": "discussion-board-express",
+  "description": "Sample Express Application to test out using Package.json to install dependencies",
+  "engines":{
+  	"node": "v4.4.5", 
+  	"npm": "2.15.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "ejs": "1.0.0",
+    "express": "~4.10.0",
+    "mongoose": "^4.4.20",
+    "socket.io": "^1.4.6"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "brandon-s",
+  "license": "MIT"
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Discussion Board</title>
+		<!-- Bring in css -->
+		<link rel='stylesheet' href='./css/bootstrap.min.css'>
+	</head>
+		<!-- Bring in Framework folder -->
+		<script type="text/javascript" src='./js/frameworks/angular.min.js'></script>
+		<script type="text/javascript" src='./js/frameworks/angular-route.js'></script>
+		<script type="text/javascript" src='./js/frameworks/functions.js'></script>
+		<script>
+			var myApp = angular.module('myApp', ['ngRoute']);
+		</script>
+		<!-- Routes -->
+		<script type="text/javascript" src='./js/routes.js'></script>
+		<!-- Factories -->
+		<script type="text/javascript" src='./js/factories/userFactory.js'></script>
+		<script type="text/javascript" src='./js/factories/topicFactory.js'></script>
+		<script type="text/javascript" src='./js/factories/answerFactory.js'></script>
+		<script type="text/javascript" src='./js/factories/commentFactory.js'></script>
+
+		<!-- Controllers -->
+		<script type="text/javascript" src='./js/controllers/usersController.js'></script>
+		<script type="text/javascript" src='./js/controllers/topicsController.js'></script>
+		<script type="text/javascript" src='./js/controllers/dashboardController.js'></script>
+		<script type="text/javascript" src='./js/controllers/userDisplayController.js'></script>
+
+	<body ng-app='myApp'>
+		<div ng-view=''>
+		</div>
+	</body>
+</html>

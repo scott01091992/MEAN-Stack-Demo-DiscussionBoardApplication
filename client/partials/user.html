@@ -1,0 +1,15 @@
+<div ng-controller='userDisplayController'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-xs-12'>
+				<a href='#/dashboard'>Dashboard</a>
+				<a href='#' ng-click='logout()'>Logout</a>
+				<h3>Username: {{displayUser.username}}</h3>
+				<p>Posted:</p>
+				<p>{{displayUser._topics.length}} Topics</p>
+				<p>{{displayUser._answers.length}} Answers</p>
+				<p>{{displayUser._comment.length}} Comment</p>
+			</div>
+		</div>
+	</div>
+</div>

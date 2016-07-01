@@ -1,0 +1,49 @@
+<div ng-controller='topicsController'>
+	{{comment}}
+	<div class='container'>
+		<div class='row'>
+			<div class='col-xs-12'>
+				<a href='#/dashboard'>Dashboard</a>
+				<a href='#' ng-click='logout()'>Logout</a>
+				<h3>
+					<a href='#/user/{{current_topic._user._id}}'>
+					{{current_topic._user.username}}</a> posted a topic:
+				</h3>
+				<h3>{{current_topic.topic}}</h3>
+				<h5>{{current_topic.description}}</h1>
+				<div class='form-group'>
+					<label>Post your answer here:</label>
+					<input type='text' class='form-control' ng-model='answer'>
+				</div>
+				<button class='btn btn-default' ng-click='create_answer()'>Submit</button>
+				<hr>
+				<div ng-repeat='answer in answers track by $index'>
+
+					<div class='answer_box'>
+
+						<a href='#/user/{{answer._user._id}}'>{{answer._user.username}}: </a> {{answer.answer}}
+						<div class='likes' style='display: inline-block'>
+							<button class='btn btn-default btn-sm' ng-click='like(answer._id, current_topic._id)'>{{answer.likes}} Like</button>
+						</div>
+
+						<div class='dislikes' style='display: inline-block'>
+							<button class='btn btn-default btn-sm' ng-click='dislike(answer._id, current_topic._id)'>{{answer.dislikes}} Dislike</button>
+						</div>
+
+						<div style='margin-left: 20px' ng-repeat='comment in answer._comments'>
+							<a href='#/user/{{comment._user._id}}'>
+							{{comment._user.username}}: </a>{{comment.comment}}
+						</div>
+
+						<div style='margin-top: 20px' class='form-group'>
+							<textarea class='form-control' ng-model='newComment[$index]'></textarea>
+						</div>
+						<button class='btn btn-default' ng-click='create_comment(answer, $index)'>Comment</button>
+						<hr>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
