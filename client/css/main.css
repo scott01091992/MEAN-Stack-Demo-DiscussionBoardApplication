@@ -1,0 +1,112 @@
+/*login*/
+@font-face {
+    font-family: CodingTable;
+    src: url(../assets/MACCRAP.otf);
+}
+@font-face {
+	font-family: MainText;
+	src: url(../assets/cuyabra.otf);
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: CodingTable;
+	margin-bottom: 25px;
+	display: inline-block;
+}
+body{
+	font-family: MainText;
+	margin: 0;
+	padding: 0;
+	-webkit-filter: blur(.2px);
+	-moz-filter: blur(.2px);
+	-o-filter: blur(.2px);
+	-ms-filter: blur(.2px);
+	filter: blur(.2px);
+}
+a{
+	text-decoration: none;
+	color: #F28D57;
+}
+a:hover{
+	text-decoration: none;
+	color: #60B505;
+}
+.form-control:focus {
+  border-color: #FF0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+input[type="text"]:focus, input[type='password']:focus, select:focus, .form-control:focus{   
+  border-color: rgba( 12,97,125, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba( 12,97,125, 0.6);
+  outline: 0 none;
+}
+
+.error{
+	color: #F28D57;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.nav_welcome{
+	display: inline-block;	
+	width: 30%;
+	font-size: 100%;
+	white-space: nowrap;
+	margin-right: 20%;
+}
+.nav_logo{
+	width: 5%;
+	height: 15%;
+	display: inline-block;
+}
+.nav_search_label{
+	display: inline-block;
+	width: 10%
+}
+.nav_search{
+	display: inline-block;
+	width: 20%;
+}
+.nav_logout{
+	display: inline-block;
+	width: 10%
+}
+.nav_bar{
+	vertical-align: middle;
+	line-height: 15%; 
+	height: 15%;
+}
+.dashboard_button{
+	width: 10%;
+	display: inline-block;
+}
+
+.like_button{
+	border: 1px solid black;
+	border-radius: 180px;
+	height: 30px;
+	width: 30px;
+}
+.align-likes{
+	display: inline-block;
+	width: 35%;
+	text-align: right;
+}
+.align-answer{
+	display: inline-block;
+	width: 63%;
+}
+.answer_like_container{
+	display: block;
+	margin-bottom: 10px;
+}
+.dashboard_button{
+	margin-left: 20%;
+	display: inline;
+}
+.custom_button:hover{
+	color: #B50508;
+}
+.answer_text{
+	font-weight: bold;
+}

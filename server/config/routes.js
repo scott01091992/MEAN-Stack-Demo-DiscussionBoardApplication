@@ -7,19 +7,20 @@ var answers = require('./../controllers/answers.js');
 var comments = require('./../controllers/comments.js');
 
 module.exports = function(app){
+	//logout
+	app.get('/logout', users.logout);
+
 	//users requests
 	//get all users
 	app.get('/users', users.index);
+	//get current user
+	app.get('/user/current', users.current_user);
 	//get user by id
 	app.get('/user/:id', users.user_info);
 	//create new user
 	app.post('/user', users.create);
-	//update user info
-	app.post('/user/edit/:id', users.update);
 	//validate user login
 	app.post('/user/login', users.login);
-	//destroy user
-	app.post('/user/:id', users.destroy);
 
 	//topics requests
 	//get all topics

@@ -1,14 +1,17 @@
 {
   "name": "discussion-board-express",
   "description": "Sample Express Application to test out using Package.json to install dependencies",
-  "engines":{
-  	"node": "v4.4.5", 
-  	"npm": "2.15.5"
+  "engines": {
+    "node": "v4.4.5",
+    "npm": "2.15.5"
   },
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.1",
+    "client-sessions": "^0.7.0",
     "ejs": "1.0.0",
     "express": "~4.10.0",
+    "express-session": "^1.14.0",
     "mongoose": "^4.4.20",
     "socket.io": "^1.4.6"
   },

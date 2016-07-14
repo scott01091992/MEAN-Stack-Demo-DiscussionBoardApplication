@@ -2,10 +2,8 @@ myApp.factory('userFactory', function($http){
 
 	var factory = {};
 
-	factory.logged_in_user = {};
-
 	factory.logout = function(){
-		factory.logged_in_user = {};
+		$http.get('/logout');
 	}
 
 	factory.get_user = function(id, callback){
@@ -15,27 +13,28 @@ myApp.factory('userFactory', function($http){
 	}
 
 	factory.get_current_user = function(callback){
-		callback(factory.logged_in_user);
+		$http.get('/user/current').success(function(output){
+			callback(output);
+		});
 	}
 
-	factory.create_user = function(user, callback){
+	factory.register_user = function(user, callback){
 		$http.post('/user', user).success(function(output){
-			factory.logged_in_user = output;
 			callback(output);
 		});
 	};
+
+	factory.login_user = function(user, callback){
+		$http.post('/user/login', user).success(function(output){
+			callback(output);
+		})
+	}
 
 	factory.getUsers = function(callback){
 		$http.get('/users').success(function(output){
 			callback(output);
 		});
 	};
-
-	factory.getUser = function(callback){
-		$http.get('/user/'+factory.display_user).success(function(output){
-			callback(output);
-		});
-	}
 
 	return factory;
 });

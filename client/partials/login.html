@@ -1,0 +1,56 @@
+<div ng-controller='usersController'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-xs-12'>
+				<h1>Code Exchange</h1>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-xs-6 login_container'>
+				<h3>
+					Login Here
+				</h3>
+				<span class='error'>{{log_error.message}}</span>
+				<div class='form-group'>
+					<label>Username </label>
+					<input type='text' class='form-control input-sm' ng-model='login_username'>
+				</div>
+				<div class='form-group'>
+					<label>Password </label>
+					<input type='password' class='form-control input-sm' ng-model='login_password'>
+				</div>
+
+				<div class='circle_button_right' ng-click='login()'>
+					<img class='power_button' src='./assets/powerbutton.png'>
+				</div>
+
+				<hr>
+			</div>
+			<div class='col-xs-6 divtwo'>
+				<h3>Register Here</h3><h4 class='success'>{{success}}</h4>
+				<span class='error' ng-repeat='e in new_errors'> {{e.message}}</span>
+				<span class='error'>{{confirm_error}}</span>
+				<div class='form-group'>
+					<label>Username </label>
+					<input type='text' name='register_username' class='form-control input-sm' ng-model='register_username'>
+				</div>
+
+				<div class='form-group'>
+					<label>Password </label>
+					<input type='password' class='form-control input-sm' ng-model='register_password'>
+				</div>
+
+				<div class='form-group'>
+					<label>Confirm Password </label>
+					<input type='password' class='form-control input-sm' ng-model='register_password_confirm'>
+				</div>
+
+				 	<div class='circle_button_left' ng-click='register()'>
+				 		<img class='power_button' src='./assets/powerbutton.png'>
+				 	</div>
+
+				<hr>
+			</div>
+		</div>
+	</div>
+</div>

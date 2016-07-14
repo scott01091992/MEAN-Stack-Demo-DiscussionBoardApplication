@@ -1,13 +1,21 @@
 <div ng-controller='dashboardController'>
 	<div class='container'>
 		<div class='row'>
-			<div class='col-xs-12'>
-
-				<h3>Welcome {{logged_in_user.username}}</h3>
-				<div class='form-group'>
-					<label>Search:</label>
-					<input type='text' class='form-control' ng-model='search'>
+			<div class='col-xs-12 nav_bar'>
+				<img class='nav_logo' src='./assets/logo.jpg'>
+				<h3 class='nav_welcome'>
+					Welcome {{logged_in_user.username}}
+				</h3>
+				<label class='nav_search_label'>Search</label>
+				<input type='text' class='form-control input-sm nav_search' ng-model='search'>
+				<div class='nav_logout custom_button' ng-click='logout()'>
+					[ Logout ]
 				</div>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-xs-12'>
+				
 				<table class='table table-striped'>
 					<tr>
 						<th>Catagory</th>
@@ -19,22 +27,25 @@
 						<input type='hidden' value='{{topic.createdAt}}'>
 
 						<td>{{topic.catagory}}</td>
-						<td><a href='#' ng-click='topic_view(topic._id)'>{{topic.topic}}</a></td>
+						<td><a href='#/topic/{{topic._id}}'>{{topic.topic}}</a></td>
 						<td><a href='#/user/{{topic._user._id}}'>{{topic._user.username}}</a></td>
 						<td>{{topic._answers.length}}</td>
 					</tr>
 				</table>
-				<div class='form-group'>
-					<label>Topic:</label>
-					<input class='form-control' type='text' ng-model='topic'>
+				<div class='error' ng-repeat='error in topic_errors'>
+					{{error.message}}
 				</div>
 				<div class='form-group'>
-					<label>Description:</label>
-					<input class='form-control' type='text' ng-model='description'>
+					<label>Topic </label>
+					<input class='form-control input-sm' type='text' ng-model='topic'>
+				</div>
+				<div class='form-group'>
+					<label>Description </label>
+					<input class='form-control input-sm' type='text' ng-model='description'>
 				</div>
 				<div class='form-group'>
 					<label>Catagory</label>
-					<select ng-model='catagory' class='form-control'>
+					<select ng-model='catagory' class='form-control input-sm'>
 						<option value='HTML'>HTML</option>
 						<option value='CSS'>CSS</option>
 						<option value='MySQL'>MySQL</option>
@@ -46,7 +57,7 @@
 						<option value='Sockets'>Sockets</option>
 					</select>
 				</div>
-				<button class='btn btn-default' ng-click='create_topic()'>Submit</button>
+				<div class='custom_button' ng-click='create_topic()'>[ Create ]</div>
 			</div>
 		</div>
 	</div>

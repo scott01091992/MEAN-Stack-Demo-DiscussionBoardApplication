@@ -1,0 +1,58 @@
+
+.power_button {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          height: 35px;
+		  width: 35px;
+}
+ 
+.power_button:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.login_container{
+	border-right: 1px solid black;
+}
+
+.circle_button_right{
+	border-radius: 360px;
+	border: 1px solid black;
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+	box-shadow: 0px 0px 5px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 70px;  
+	transform: rotate(180deg); 
+	margin-left: 25px;
+} 
+.circle_button_left{
+	border-radius: 360px;
+	border: 1px solid black;
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+	box-shadow: 0px 0px 5px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 70px; 
+	margin-left: 25px;      
+} 
+.circle_button: hover{
+	background-color: red;
+}
+
+.success{
+	display: inline;
+	color: #60B505;
+	margin-bottom: 10px;
+}

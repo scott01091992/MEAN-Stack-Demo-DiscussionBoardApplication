@@ -4,13 +4,17 @@
 		<title>Discussion Board</title>
 		<!-- Bring in css -->
 		<link rel='stylesheet' href='./css/bootstrap.min.css'>
+		<link rel='stylesheet' href='./css/main.css'>
+		<link rel='stylesheet' href='./css/login.css'>
+
 	</head>
 		<!-- Bring in Framework folder -->
 		<script type="text/javascript" src='./js/frameworks/angular.min.js'></script>
 		<script type="text/javascript" src='./js/frameworks/angular-route.js'></script>
-		<script type="text/javascript" src='./js/frameworks/functions.js'></script>
+		<script type="text/javascript" src='./js/frameworks/angular-messages.js'></script>
+
 		<script>
-			var myApp = angular.module('myApp', ['ngRoute']);
+			var myApp = angular.module('myApp', ['ngRoute', 'ngMessages']);
 		</script>
 		<!-- Routes -->
 		<script type="text/javascript" src='./js/routes.js'></script>

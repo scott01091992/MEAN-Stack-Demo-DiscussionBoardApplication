@@ -1,6 +1,6 @@
 var AnswerSchema = new mongoose.Schema({
 
-	answer: {type: String, required: true},
+	answer: {type: String, required: [true, 'Answer field cannot be empty']},
 	_user: {type: mongoose.Schema.Types.ObjectId, ref: 'Users', required: true}, 
 	_topic: {type: mongoose.Schema.Types.ObjectId, ref: 'Topics', required: true},
 	_comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comments'}],

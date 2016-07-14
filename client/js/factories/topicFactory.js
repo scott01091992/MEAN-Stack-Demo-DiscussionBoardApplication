@@ -13,16 +13,11 @@ myApp.factory('topicFactory', function($http){
 		});
 	};
 
-	factory.get_current_topic = function(callback){
-		callback(factory.current_topic);
-	}
-
-	factory.viewTopic = function(id, callback){
+	factory.get_current_topic = function(id, callback){
 		$http.get('/topic/'+id).success(function(output){
-			factory.current_topic = output;
 			callback(output);
 		});
-	};
+	}
 
 	return factory;
 });

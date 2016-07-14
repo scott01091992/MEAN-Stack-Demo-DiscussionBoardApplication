@@ -27,7 +27,7 @@ module.exports = (function(){
 			var topic = new Topics(req.body);
 			topic.save(function(err){
 				if(err){
-					console.log(err);
+					res.json(err);
 				}
 				else{
 					Users.findByIdAndUpdate({_id: req.body._user}, {$push: {_topics: topic._id}}, function(err){
