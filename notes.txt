@@ -1,0 +1,3 @@
+No bugs found. 
+
+Would like to add feature to remove ability to limit number of likes per user per answer to 1. 
