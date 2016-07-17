@@ -1,9 +1,14 @@
 //modules
 var express = require('express');
+
 mongoose = require('mongoose');
+
 var bodyParser = require('body-parser');
+
 var path = require('path');
+
 var session = require('express-session');
+
 bcrypt = require('bcryptjs');
 
 var app = express();

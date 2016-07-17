@@ -8,7 +8,7 @@
           height: 35px;
 		  width: 35px;
 }
- 
+
 .power_button:hover {
   border-radius: 50%;
   -webkit-transform: rotate(360deg);
@@ -31,10 +31,11 @@
 	box-shadow: 0px 0px 5px;
 	text-align: center;
 	vertical-align: middle;
-	line-height: 70px;  
-	transform: rotate(180deg); 
+	line-height: 70px;
+	transform: rotate(180deg);
 	margin-left: 25px;
-} 
+}
+
 .circle_button_left{
 	border-radius: 360px;
 	border: 1px solid black;
@@ -44,9 +45,10 @@
 	box-shadow: 0px 0px 5px;
 	text-align: center;
 	vertical-align: middle;
-	line-height: 70px; 
-	margin-left: 25px;      
-} 
+	line-height: 70px;
+	margin-left: 25px;
+}
+
 .circle_button: hover{
 	background-color: red;
 }

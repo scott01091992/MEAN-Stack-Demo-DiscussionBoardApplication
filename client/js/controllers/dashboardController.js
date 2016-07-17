@@ -1,6 +1,6 @@
 myApp.controller('dashboardController', function($scope, $location, topicFactory, userFactory){
 
-	// get user from session	
+	// get user from session
 	userFactory.get_current_user(function(callback){
 		if(callback.error){
 			$location.path('/');
@@ -33,7 +33,6 @@ myApp.controller('dashboardController', function($scope, $location, topicFactory
 				$scope.catagory = '';
 				$scope.topic_errors = [];
 			}
-			
 		});
 	};
 

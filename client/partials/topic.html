@@ -5,52 +5,69 @@
 			<div class='col-xs-12 nav_bar'>
 				<div class='nav'>
 					<img class='nav_logo' src='./assets/logo.jpg'>
-					<h3 class='nav_welcome'><a href='#/user/{{current_topic._user._id}}'>
-					{{current_topic._user.username}}</a> posts...</h3>
+					<h3 class='nav_welcome'>
+						<a href='#/user/{{current_topic._user._id}}'>
+							{{current_topic._user.username}}
+						</a>
+						posts...
+					</h3>
 					<div class='dashboard_button custom_button' ng-click='dashboard()'> [ Dashboard ] </div>
 					<div class='nav_logout custom_button' ng-click='logout()'>[ Logout ]</div>
 				</div>
 			</div>
 		</div>
 		<div class='row'>
-			<div class='col-xs-12'>				
-				<h3>{{current_topic.topic}}</h3>
-				<h5>{{current_topic.description}}</h1>
+			<div class='col-xs-12'>
+				<h3>
+					{{current_topic.topic}}
+				</h3>
+				<h5>
+					{{current_topic.description}}
+				</h1>
 				<div class='form-group'>
-					<label>Answer this question:</label>
+					<label>
+						Answer this question:
+					</label>
 					<input type='text' class='form-control' ng-model='answer'>
 				</div>
 				<div class='custom_button' ng-click='create_answer()'>Answer</div>
 				<hr>
 				<div ng-repeat='answer in answers track by $index'>
-
 					<div class='answer_box'>
 						<div class='answer_like_container'>
 							<div class='align-answer'>
-								<a class='answer_text' href='#/user/{{answer._user._id}}'>{{answer._user.username}} Answers...</a> {{answer.answer}}
+								<a class='answer_text' href='#/user/{{answer._user._id}}'>
+									{{answer._user.username}} Answers...
+								</a>
+								{{answer.answer}}
 							</div>
 							<div class='align-likes'>
 								<div class='likes' style='display: inline-block'>
-									<img src='./assets/like_button.jpg' class='btn btn-default btn-sm like_button' ng-click='like(answer._id, current_topic._id)'> <span class='like_counter'>Like {{answer.likes}}</span>
+									<img src='./assets/like_button.jpg' class='btn btn-default btn-sm like_button' ng-click='like(answer._id, current_topic._id)'>
+									<span class='like_counter'>
+										Like{{answer.likes}}
+									</span>
 								</div>
 								<div class='dislikes' style='display: inline-block'>
-									<img src='./assets/dislike_button.jpg' class='btn btn-default btn-sm like_button' ng-click='dislike(answer._id, current_topic._id)'> <span class='like_counter'>Dislike {{answer.dislikes}}</span>
+									<img src='./assets/dislike_button.jpg' class='btn btn-default btn-sm like_button' ng-click='dislike(answer._id, current_topic._id)'>
+									<span class='like_counter'>
+										Dislike {{answer.dislikes}}
+									</span>
 								</div>
 							</div>
 						</div>
-
 						<div style='margin-left: 20px' ng-repeat='comment in answer._comments'>
 							<a href='#/user/{{comment._user._id}}'>
-							{{comment._user.username}} says... </a>{{comment.comment}}
+								{{comment._user.username}} says...
+							</a>
+							{{comment.comment}}
 						</div>
-
 						<div style='margin-top: 20px' class='form-group'>
 							<textarea class='form-control' ng-model='newComment[$index]'></textarea>
 						</div>
 						<div class='custom_button' ng-click='create_comment(answer, $index)'>[ Comment ]</div>
 						<hr>
 					</div>
-
 				</div>
 			</div>
 		</div>
